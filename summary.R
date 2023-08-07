@@ -7,12 +7,14 @@ pop_rate <- read_csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main/us
 small_pop_rate <- read_csv("https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-prison-jail-rates-1990.csv?raw=true")
 WA_pop_rate <- read_csv("https://github.com/melaniewalsh/Neat-Datasets/raw/main/us-prison-jail-rates-1990-WA.csv")
 
-# What is the average value of my variable across all the counties (in the current year)?
+# What is the sum of jail population in the US?
 sum_total_jail_pop <- jail_pop %>%
   filter(!is.na(total_jail_pop)) %>%
   mutate(sum_total_pop = sum(total_jail_pop)) %>%
   head(1) %>%
   pull(sum_total_pop)
+
+# What is the average of female and male jail population? 
 
 avg_female_jail_pop <- jail_pop %>%
   filter(!is.na(female_jail_pop)) %>%
@@ -46,7 +48,7 @@ avg_male_jail_pop %>%
   arrange(desc(avg_male_pop)) %>%
   tail(1)
 
-# How much has my variable changed over the last N years?
+# How much has jail population changed over the last 10 years?
 x1 <- jail_pop %>%
   filter(!is.na(total_jail_pop)) %>%
   group_by(year) %>%
