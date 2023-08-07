@@ -64,12 +64,12 @@ To show the pattern of how the jail population has changed over time, I plot a l
 
 I use a scatterplot to represent these two variables in order to visualize the relationship between the gender of prisoners, both male and female. The clusters that form a positive linear line on the plot show a positive relationship between the male and female populations. The fact that their correlation is positive indicates that they are interdependent. For instance, when the population of men increases, so does the number of women in jail, and vice versa. 
 
-```{r, echo = FALSE, code = readLines("chart3.R")}
+```{r, echo = FALSE, code = readLines("chart2.R")}
 ```
 
 ### Map
 
 I overlay the heat map of the jail population on the US state map in order to clearly show which state has the highest number of the prisoners and identify the location where we should be more concerned about security and safety. It demonstrates that the south of the US is likely to have more prisoners, particularly California, which has the highest prison population shown by the yellow color, while other states in the middle of the country's north have fewer people overall in jails as those are shown in darker blue color of the scale. The South is now more aware of security as a result. 
 
-```{r, echo = FALSE, code = readLines("chart.R")}
+```{r, echo = FALSE, code = readLines("chart3.R")}
 ```
